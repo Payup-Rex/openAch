@@ -12,6 +12,6 @@ let argv = require('minimist')(process.argv.slice(2));
     let parser = new AchParser();
 
     // Defaults to process standard input if filename not present.
-    let ach = await parser.parseAchFile(filename || process.stdin);
+    let ach = await parser.parseAchFile('Tanglewood 2.1.23.txt');
     console.log(JSON.stringify(ach));
 })(argv);
